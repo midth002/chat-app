@@ -4,8 +4,12 @@ const http = require('http');
 
 const PORT = process.env.PORT || 3001
 
+const router = require('./router');
+
 const app = express();
 const server = http.createServer(app);
+
+app.use(router);
 
 
 const io = socketio(server);
