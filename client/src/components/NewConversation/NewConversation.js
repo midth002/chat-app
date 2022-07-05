@@ -3,7 +3,7 @@ import { Modal, Form, Button } from 'react-bootstrap';
 import { useContacts } from '../../contexts/ContactsProvider'
 import { useConversations } from '../../contexts/ConversationsProvider'
 
-const NewConversation = ( closeModal, ) => {
+const NewConversation = ({closeModal}) => {
 
    const [selectedContactIds, setSelectedContactIds] = useState([])
     const { contacts } = useContacts();
